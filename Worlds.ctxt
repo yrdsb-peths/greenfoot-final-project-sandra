@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=Worlds
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Worlds\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=num\ num2\ num3
+comment1.target=Worlds(int,\ int,\ int)
+comment10.params=
+comment10.target=boolean\ getLevelUp()
+comment2.params=num\ num2\ num3\ bool
+comment2.target=Worlds(int,\ int,\ int,\ boolean)
+comment3.params=value
+comment3.target=void\ updateMoney(int)
+comment4.params=
+comment4.target=int\ getMoney()
+comment5.params=
+comment5.target=int\ getLabelX()
+comment6.params=
+comment6.target=int\ getLabelY()
+comment7.params=
+comment7.target=int\ getLevel()
+comment8.params=num
+comment8.target=void\ addLevel(int)
+comment9.params=bool
+comment9.target=void\ setLevelUp(boolean)
+numComments=11

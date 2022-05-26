@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Button
+comment1.params=name\ cost
+comment1.target=Button(java.lang.String,\ int)
+comment2.params=name\ cost\ sizex\ sizey
+comment2.target=Button(java.lang.String,\ int,\ int,\ int)
+comment3.params=
+comment3.target=void\ act()
+comment4.params=
+comment4.target=void\ showText()
+comment5.params=
+comment5.target=void\ buy()
+comment6.params=
+comment6.target=boolean\ getBuyStatus()
+comment7.params=
+comment7.target=java.lang.String\ getName()
+comment8.params=
+comment8.target=int\ getCost()
+comment9.params=num
+comment9.target=void\ updateCost(int)
+numComments=10
