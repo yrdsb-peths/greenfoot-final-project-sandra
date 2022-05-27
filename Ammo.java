@@ -8,10 +8,20 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Ammo extends Actor
 {
-    public static int speed;
-    public static int score;
-    public static int strength;
-    public static int numAmmo;
+    public static int speed; //speed of bullets
+    public static int strength; //strength of bullets
+    public static int numAmmo; //current number of bullets that are not fired
+    /**
+     * Sets the default rotation of the bullet and
+     * decrements the total amount of bullets by 1
+     */
+    public Ammo(int rotation){
+        setRotation(rotation);
+        numAmmo--;
+    }
+    /**
+     * This makes the bullet move forward
+     */
     public void act()
     {
         move(speed);
@@ -19,16 +29,23 @@ public class Ammo extends Actor
             getWorld().removeObject(this);
         }
     }
-    public Ammo(int rotation){
-        setRotation(rotation);
-        numAmmo--;
-    }
+    /**
+     * increases the speed of the bullets
+     * @param num   the speed to increase by
+     */
     public static void increaseSpeed(int num){
         speed+=num;
     }
+    /**
+     * increases the strength of the ammo class
+     * @param num   the strength to increase by
+     */
     public static void increaseStrength(int num){
         strength+=num;
     }
+    /**
+     * @return the current strength of the bullet
+     */
     public static int getStrength(){
         return strength;
     }

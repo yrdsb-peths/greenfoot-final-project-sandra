@@ -8,20 +8,17 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Enemy extends Actor
 {
-    /**
-     * Act - do whatever the Enemy wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    private int speed;
-    private int lives;
-    public static int maxNumEnemies;
-    public static int numEnemies;
+    private int speed = 1; //keeps track of enemy speed
+    private int lives; //number of lives the current enemy has
+    public static int maxNumEnemies; //maximum number of enemies in the world
+    public static int numEnemies; //current number of enemies in the world
     
+    /**
+     * @param lives     the number of lives the enemy has
+     */
     public Enemy(int lives){
         this.lives = lives;
         numEnemies ++;
-        speed = 1;
-        //make it so that, if a certain number of upgrades are bought, speed increases a certain amount.
     }
     public void act() 
     {
@@ -31,16 +28,22 @@ public class Enemy extends Actor
             int x = getX();
             int y = getY();
             setLocation(x, y + speed);
-            showText("" + lives, world);
+            showText("" + lives, world); //displays the number of lives the enemy has
+            
+            //removes the current object and sets the world to game over if the enemy is offscreen
             if(getY() > world.getHeight()){
                 showText(null, world);
                 world.gameOver();
                 world.removeObject(this);
             }else{
-                getShot();   
+                getShot();
             }
         }
     }
+    /**
+     * checks if enemy is touching a bullet. If so, removes a life.
+     * If the enemy has less than one life, removes the enemy from the screen
+     */
     public void getShot(){
         if(isTouching(Ammo.class)){
             int curLives = lives;
@@ -49,7 +52,7 @@ public class Enemy extends Actor
             MyWorld world = (MyWorld) getWorld();
             world.addScore(curLives*2);
             world.setLevelUp(false);
-            if(lives<=0){
+            if(lives<1){
                 showText(null, world);
                 world.addScore(3);
                 world.spawnEnemy();
@@ -58,9 +61,15 @@ public class Enemy extends Actor
             }
         }
     }
+    /**
+     * overridden showText method to ensure that the value is shown on the right part of the enemy
+     */
     private void showText(String value, World world){
         world.showText(value, getX(), getY() + 4);
     }
+    /**
+     * @param num   number of max enemies to be set
+     */
     public static void setMaxEnemies(int num){
         maxNumEnemies = num;
     }

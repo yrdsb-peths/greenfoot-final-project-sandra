@@ -1,14 +1,19 @@
 #BlueJ class context
 comment0.target=Ammo
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ Ammo\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=
-comment1.target=void\ act()
-comment2.params=rotation
-comment2.target=Ammo(int)
+comment1.params=rotation
+comment1.target=Ammo(int)
+comment1.text=\r\n\ Sets\ the\ default\ rotation\ of\ the\ bullet\ and\r\n\ decrements\ the\ total\ amount\ of\ bullets\ by\ 1\r\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ This\ makes\ the\ bullet\ move\ forward\r\n
 comment3.params=num
 comment3.target=void\ increaseSpeed(int)
+comment3.text=\r\n\ increases\ the\ speed\ of\ the\ bullets\r\n\ @param\ num\ \ \ the\ speed\ to\ increase\ by\r\n
 comment4.params=num
 comment4.target=void\ increaseStrength(int)
+comment4.text=\r\n\ increases\ the\ strength\ of\ the\ ammo\ class\r\n\ @param\ num\ \ \ the\ strength\ to\ increase\ by\r\n
 comment5.params=
 comment5.target=int\ getStrength()
+comment5.text=\r\n\ @return\ the\ current\ strength\ of\ the\ bullet\r\n
 numComments=6

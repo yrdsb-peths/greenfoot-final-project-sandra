@@ -8,8 +8,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends Worlds
 {
-    private static int score;
-    private Shop shop;
+    private static int score; //player score
+    private Shop shop; //Shop world to keep track of
+    
+    /**
+     * creates the game world
+     */
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -18,11 +22,9 @@ public class MyWorld extends Worlds
         score = 0;
         prepare();        
     }
-    public void spawnEnemy()
-    {
-        Enemy enemy = new Enemy (getLevel() + Greenfoot.getRandomNumber(getLevel())/2);
-        addObject(enemy, Greenfoot.getRandomNumber(getWidth()), 0);
-    }
+    /**
+     * prepares the world with text, a single enemy, and all the game buttons
+     */
     private void prepare()
     {
         showText("Level " + getLevel() + "\nScore: " + score+"\nMoney: " + getMoney(), getLabelX(), getLabelY());
@@ -45,10 +47,11 @@ public class MyWorld extends Worlds
         MaxAmmo maxAmmo = new MaxAmmo();
         addObject(maxAmmo,56,304);
     }
-    public void addScore(int num){
-        score+=num;
-        updateMoney(10+num);
-    }
+    /**
+     * shows and updates the score
+     * also keeps track of level up
+     * randomly spawns an enemy IF the number of enemies is not the current maximum
+     */
     public void act(){
         showText(null, getLabelX(), getLabelY());
         if(score!=0 && score>=50*getLevel() && !getLevelUp()){
@@ -61,13 +64,39 @@ public class MyWorld extends Worlds
             spawnEnemy();
         }
     }
+    /**
+     * spawns an enemy
+     */
+    public void spawnEnemy()
+    {
+        //sets number of enemy lives to a random number that scales on the game level
+        Enemy enemy = new Enemy (getLevel() + Greenfoot.getRandomNumber(getLevel())/2);
+        addObject(enemy, Greenfoot.getRandomNumber(getWidth()), 0);
+    }
+    /**
+     * increments the score
+     * @param num   the number to increment the score by
+     */
+    public void addScore(int num){
+        score+=num;
+        updateMoney(10+num);
+    }
+    /**
+     * returns the shop of the world
+     */
     public Shop getShop()
     {
         return shop;
     }
+    /**
+     * returns the player score 
+     */
     public static int getScore(){
         return score;
     }
+    /**
+     * sets the world to game over
+     */
     public void gameOver()
     {
         GameOverWorld world = new GameOverWorld();

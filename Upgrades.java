@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Upgrades extends Button
 {
     private int upgradeLevel;
-    private int[] prices = {300, 1000, 3000, 6000};
+    private int[] prices = {200, 500, 800, 1200};
     public Upgrades(String name){
         super(name, 0, 400, 70);
         upgradeLevel = 0;
