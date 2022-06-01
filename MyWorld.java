@@ -10,7 +10,7 @@ public class MyWorld extends Worlds
 {
     private static int score; //player score
     private Shop shop; //Shop world to keep track of
-    
+    private Label label;
     /**
      * creates the game world
      */
@@ -27,8 +27,9 @@ public class MyWorld extends Worlds
      */
     private void prepare()
     {
-        showText("Level " + getLevel() + "\nScore: " + score+"\nMoney: " + getMoney(), getLabelX(), getLabelY());
-
+        label = new Label("Level " + getLevel() + "\nScore: " + score+"\nMoney: " + getMoney(), 25);
+        addObject(label, getLabelX(), getLabelY());
+        
         Attacker attacker = new Attacker();
         addObject(attacker,getWidth()/2,getHeight());
         showText("" + Ammo.numAmmo, getWidth()/2,getHeight()-10);
@@ -53,13 +54,12 @@ public class MyWorld extends Worlds
      * randomly spawns an enemy IF the number of enemies is not the current maximum
      */
     public void act(){
-        showText(null, getLabelX(), getLabelY());
         if(score!=0 && score>=50*getLevel() && !getLevelUp()){
             addLevel(1);
             setLevelUp(true);
             Enemy.setMaxEnemies(getLevel()/2);
         }
-        showText("Level " + getLevel() + "\nScore: " + score+"\nMoney: " + super.getMoney(), getLabelX(), getLabelY());
+        label.setValue("Level " + getLevel() + "\nScore: " + score+"\nMoney: " + super.getMoney());
         if(Enemy.numEnemies<Enemy.maxNumEnemies && Greenfoot.getRandomNumber(15)==5){
             spawnEnemy();
         }
