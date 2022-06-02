@@ -10,7 +10,7 @@ public class Worlds extends World
 {
     private static int money; //player's current balance
     private int labelX = 60; //X location for label at top left corner of screen
-    private int labelY = 40; //Y location for label at top left corner of screen
+    private int labelY = 50; //Y location for label at top left corner of screen
     private static int level; //player level
     //boolean to ensure that player only levels up once when threshold is hit
     private boolean levelUp = false; 

@@ -9,7 +9,7 @@
 public class Upgrades extends Button
 {
     private int upgradeLevel;
-    private int[] prices = {200, 500, 800, 1200};
+    private int[] prices = {100, 300, 500, 800};
     public Upgrades(String name){
         super(name, 0, 400, 70);
         upgradeLevel = 0;

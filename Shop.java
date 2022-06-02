@@ -24,7 +24,6 @@ public class Shop extends Worlds
         
         CloseShop close = new CloseShop();
         addObject(close,546,35);
-        close.showText();
         
         DecCd deccd = new DecCd();
         addObject(deccd, 300, 120);

@@ -16,15 +16,13 @@ public class MaxAmmo extends Button
         updateCost(((Worlds)getWorld()).getMoney()/10*10);
         showText();
     }
+    protected void addedToWorld(){
+        super.addedToWorld(getX(), getY()-35);
+    }
     public void buy(){
         if(super.getBuyStatus()){
             Ammo.numAmmo+= getCost()/10;
             super.buy();
         }
-    }
-    //show text sucks
-    public void showText(){
-        getWorld().showText("", getX(), getY()-35);      
-        getWorld().showText("Buy " + getCost()/10 + "\n$" + getCost(), getX(), getY()-35);        
     }
 }

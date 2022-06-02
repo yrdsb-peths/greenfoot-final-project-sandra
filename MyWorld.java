@@ -28,6 +28,7 @@ public class MyWorld extends Worlds
     private void prepare()
     {
         label = new Label("Level " + getLevel() + "\nScore: " + score+"\nMoney: " + getMoney(), 25);
+        label.setLineColor(new Color(0, 0, 0, 0));
         addObject(label, getLabelX(), getLabelY());
         
         Attacker attacker = new Attacker();
@@ -38,12 +39,10 @@ public class MyWorld extends Worlds
         Enemy.setMaxEnemies(1);
         
         BtnAmmo btnAmmo = new BtnAmmo();
-        addObject(btnAmmo,56,366);
-        btnAmmo.showText();
+        addObject(btnAmmo,56,366);;
 
         ShopBtn shopBtn = new ShopBtn();
         addObject(shopBtn,546,35);
-        shopBtn.showText();
 
         MaxAmmo maxAmmo = new MaxAmmo();
         addObject(maxAmmo,56,304);

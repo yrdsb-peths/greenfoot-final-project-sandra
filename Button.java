@@ -5,6 +5,7 @@ public class Button extends Actor
     private int cost;
     private String name;
     private boolean canBuy;
+    private Label label;
     
     public Button(String name, int cost){
         getImage().scale(70, 50);
@@ -16,8 +17,27 @@ public class Button extends Actor
         this.name = name;
         this.cost = cost;
     }
+    protected void addedToWorld(){
+        if(cost!=0){
+            label = new Label(name + "\n$" + cost, 25);
+            getWorld().addObject(label, getX(), getY());
+        }else{
+            label = new Label(name + "\n$" + cost, 25);
+            getWorld().addObject(label, getX(), getY());
+        }
+    }
+    protected void addedToWorld(int x, int y){
+        if(cost!=0){
+            label = new Label(name + "\n$" + cost, 25);
+            getWorld().addObject(label, x, y);
+        }else{
+            label = new Label(name + "\n$" + cost, 25);
+            getWorld().addObject(label, x, y);
+        }
+    }
     public void act()
     {
+        showText();
         if(cost <= ((Worlds)getWorld()).getMoney()){
             canBuy = true;
         }
@@ -27,9 +47,9 @@ public class Button extends Actor
     }
     public void showText(){
         if(cost!=0){
-            getWorld().showText(name + "\n$" + cost, getX(), getY());
+            label.setValue(name + "\n$" + cost);
         }else{
-            getWorld().showText(name, getX(), getY());
+            label.setValue(name);
         }
     }
     public void buy(){
