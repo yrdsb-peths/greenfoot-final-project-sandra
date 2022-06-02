@@ -16,7 +16,7 @@ public class Button extends Actor
         }else{
             label = new Label(name, 25);
         }
-        label.setLineColor(new Color(0, 0, 0, 0));
+        label.setLineColor(Label.TRANSPARENT);
     }
     public Button(String name, int cost, int sizex, int sizey){
         getImage().scale(sizex, sizey);

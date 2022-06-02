@@ -13,14 +13,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Label extends Actor
 {
+    public static final Color MYCOLOUR = new Color(123, 168, 176);
+    public static final Color TRANSPARENT = new Color(0,0,0,0);
+    
     private String value;
     private int fontSize;
     private Color lineColor = Color.BLACK;
     private Color fillColor = Color.WHITE;
-    
-    private static final Color transparent = new Color(0,0,0,0);
-
-    
     /**
      * Create a new label, initialise it with the int value to be shown and the font size 
      */
@@ -89,6 +88,6 @@ public class Label extends Actor
      */
     private void updateImage()
     {
-        setImage(new GreenfootImage(value, fontSize, fillColor, transparent, lineColor));
+        setImage(new GreenfootImage(value, fontSize, fillColor, TRANSPARENT, lineColor));
     }
 }

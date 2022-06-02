@@ -28,7 +28,7 @@ public class MyWorld extends Worlds
     private void prepare()
     {
         label = new Label("Level " + getLevel() + "\nScore: " + score+"\nMoney: " + getMoney(), 25);
-        label.setLineColor(new Color(0, 0, 0, 0));
+        label.setLineColor(Label.TRANSPARENT);
         addObject(label, getLabelX(), getLabelY());
         
         Attacker attacker = new Attacker();

@@ -17,9 +17,12 @@ public class GameOverWorld extends Worlds
     {
         super(600, 400, 1); 
         Label gameOverLabel = new Label("Game Over!", 100);
+        gameOverLabel.setLineColor(Label.MYCOLOUR);
         addObject(gameOverLabel, 300, 180);
         
-        Label scoreLabel = new Label("Score: " + MyWorld.getScore(), 80);
+        Label scoreLabel = new Label("Level: " + (MyWorld.getScore()/50+1) + "    Score: " + MyWorld.getScore(), 50);
+        scoreLabel.setFillColor(Label.MYCOLOUR);
+        scoreLabel.setLineColor(Label.TRANSPARENT);
         addObject(scoreLabel, 300, 250);
     }
 }

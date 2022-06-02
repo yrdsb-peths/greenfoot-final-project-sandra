@@ -17,18 +17,18 @@ public class TitleScreenWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
-        Label titleLabel = new Label("Ant Shooter Game", 80);
-        titleLabel.setLineColor(new Color(0, 0, 0, 0));
+        Label titleLabel = new Label("2D Shooter Game", 80);
+        titleLabel.setLineColor(Label.MYCOLOUR);
         addObject(titleLabel,300, 170);
         
         Label instructionLabel = new Label("Press <space> to begin", 50);
-        instructionLabel.setFillColor(new Color(123, 168, 176));
-        instructionLabel.setLineColor(new Color(0, 0, 0, 0));
+        instructionLabel.setFillColor(Label.MYCOLOUR);
+        instructionLabel.setLineColor(Label.TRANSPARENT);
         addObject(instructionLabel, 300, 230);
         
         Label howToPlay = new Label("<a> to shoot and move mouse to aim", 30);
-        howToPlay.setFillColor(new Color(123, 168, 176));
-        howToPlay.setLineColor(new Color(0, 0, 0, 0));
+        howToPlay.setFillColor(Label.MYCOLOUR);
+        howToPlay.setLineColor(Label.TRANSPARENT);
         addObject(howToPlay, 300, 270);
     }
     public void act(){
