@@ -16,6 +16,7 @@ public class Button extends Actor
         }else{
             label = new Label(name, 25);
         }
+        label.setLineColor(new Color(0, 0, 0, 0));
     }
     public Button(String name, int cost, int sizex, int sizey){
         getImage().scale(sizex, sizey);
@@ -27,11 +28,12 @@ public class Button extends Actor
         }else{
             label = new Label(name, 25);
         }
+        label.setLineColor(new Color(0, 0, 0, 0));
     }
-    protected void addedToWorld(){
+    protected void addedToWorld(World world){
         getWorld().addObject(label, getX(), getY());
     }
-    protected void addedToWorld(int x, int y){
+    protected void addedToWorld(World world, int x, int y){
         getWorld().addObject(label, x, y);
     }
     public void act()
@@ -40,7 +42,7 @@ public class Button extends Actor
         if(cost <= ((Worlds)getWorld()).getMoney()){
             canBuy = true;
         }
-        if(Greenfoot.mouseClicked(this) && canBuy){
+        if(Greenfoot.mouseClicked(this) || Greenfoot.mouseClicked(label)&& canBuy){
             buy();
         }
     }
@@ -63,10 +65,16 @@ public class Button extends Actor
     public String getName(){
         return name;
     }
+    public void setName(String name){
+        this.name = name;
+    }
     public int getCost(){
         return cost;
     }
     public void updateCost(int num){
         cost = num;
+    }
+    public Label getLabel(){
+        return label;
     }
 }

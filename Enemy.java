@@ -12,6 +12,7 @@ public class Enemy extends Actor
     private int lives; //number of lives the current enemy has
     public static int maxNumEnemies; //maximum number of enemies in the world
     public static int numEnemies; //current number of enemies in the world
+    private Label label;
     /**
      * @param lives     the number of lives the enemy has
      */

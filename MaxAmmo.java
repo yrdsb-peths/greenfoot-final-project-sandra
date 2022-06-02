@@ -9,15 +9,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class MaxAmmo extends Button
 {
     public MaxAmmo(){
-        super("Ammo", 0, 20, 20);
+        super("Buy 1", 0);
     }
     public void act(){
         super.act();
         updateCost(((Worlds)getWorld()).getMoney()/10*10);
-        showText();
-    }
-    protected void addedToWorld(){
-        super.addedToWorld(getX(), getY()-35);
+        setName("Buy " + ((Worlds)getWorld()).getMoney()/10);
     }
     public void buy(){
         if(super.getBuyStatus()){

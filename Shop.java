@@ -10,7 +10,8 @@ public class Shop extends Worlds
 {
     private MyWorld gameWorld;
     private Worlds world;
-
+    private Label label;
+    
     public Shop(MyWorld world)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -20,7 +21,9 @@ public class Shop extends Worlds
     }
 
     private void prepare(){
-        showText("Money: " + getMoney(), getLabelX(), getLabelY()-20);
+        label = new Label("Money: " + getMoney(), 25);
+        label.setLineColor(new Color(0, 0, 0, 0));
+        addObject(label, getLabelX(), getLabelY()-15);
         
         CloseShop close = new CloseShop();
         addObject(close,546,35);
@@ -36,7 +39,7 @@ public class Shop extends Worlds
     }
     
     public void act(){
-        showText("Money: " + getMoney(), getLabelX(), getLabelY()-20);
+        label.setValue("Money: " + getMoney());
     }
     
     public void resumeGame()
