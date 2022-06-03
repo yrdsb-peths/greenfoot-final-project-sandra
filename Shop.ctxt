@@ -2,11 +2,14 @@
 comment0.target=Shop
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ Shop\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=world
-comment1.target=Shop(MyWorld)
+comment1.target=Shop(GameWorld)
 comment2.params=
 comment2.target=void\ prepare()
+comment2.text=\r\n\ prepares\ the\ shop\ with\ all\ necessary\ buttons\ and\ label\ in\ corner\ for\ money\r\n
 comment3.params=
 comment3.target=void\ act()
+comment3.text=\r\n\ updates\ the\ money\ label\r\n
 comment4.params=
 comment4.target=void\ resumeGame()
+comment4.text=\r\n\ goes\ back\ to\ the\ game\ world\r\n
 numComments=5

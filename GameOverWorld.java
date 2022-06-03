@@ -20,7 +20,7 @@ public class GameOverWorld extends Worlds
         gameOverLabel.setLineColor(Label.MYCOLOUR);
         addObject(gameOverLabel, 300, 180);
         
-        Label scoreLabel = new Label("Level: " + (MyWorld.getScore()/50+1) + "    Score: " + MyWorld.getScore(), 50);
+        Label scoreLabel = new Label("Level: " + (GameWorld.getScore()/50+1) + "    Score: " + GameWorld.getScore(), 50);
         scoreLabel.setFillColor(Label.MYCOLOUR);
         scoreLabel.setLineColor(Label.TRANSPARENT);
         addObject(scoreLabel, 300, 250);

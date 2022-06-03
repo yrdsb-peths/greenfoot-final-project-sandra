@@ -17,6 +17,6 @@ public class ShopBtn extends Button
         showText();
     }
     public void buy(){
-        Greenfoot.setWorld(((MyWorld)getWorld()).getShop());
+        Greenfoot.setWorld(((GameWorld)getWorld()).getShop());
     }
 }

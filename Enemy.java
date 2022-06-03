@@ -19,20 +19,31 @@ public class Enemy extends Actor
     public Enemy(int lives){
         this.lives = lives;
         numEnemies ++;
+        label = new Label(lives, 25);
+        label.setLineColor(Label.TRANSPARENT);
+    }
+    /**
+     * adds the label at the location of the enemy
+     */
+    public void addedToWorld(World world){
+        getWorld().addObject(label, getX(), getY() + 5);
     }
     public void act() 
     {
         if(this!=null){
-            MyWorld world = (MyWorld) getWorld();
-            showText(null, world);
-            int x = getX();
-            int y = getY();
-            setLocation(x, y + speed);
-            showText("" + lives, world); //displays the number of lives the enemy has
+            GameWorld world = (GameWorld) getWorld();
+            //showText(null, world);
+            
+            //moves both the enemy and the label down
+            this.setLocation(getX(), getY() + speed);
+            label.setLocation(label.getX(), label.getY() + speed);
+            
+            //showText("" + lives, world); //displays the number of lives the enemy has
+            label.setValue(lives); //updates the number of lives the enemy has
             
             //removes the current object and sets the world to game over if the enemy is offscreen
             if(getY() > world.getHeight()){
-                showText(null, world);
+                world.removeObject(label); //removes the text
                 world.gameOver();
                 world.removeObject(this);
             }else{
@@ -49,23 +60,19 @@ public class Enemy extends Actor
             int curLives = lives;
             removeTouching(Ammo.class);
             lives -= Ammo.getStrength();
-            MyWorld world = (MyWorld) getWorld();
+            GameWorld world = (GameWorld) getWorld();
             world.addScore(curLives*2);
             world.setLevelUp(false);
             if(lives<1){
-                showText(null, world);
+                world.removeObject(label); //removes the text
                 world.addScore(3);
-                world.spawnEnemy();
                 numEnemies--;
+                if(numEnemies == 0){
+                    world.spawnEnemy();
+                }
                 world.removeObject(this);
             }
         }
-    }
-    /**
-     * overridden showText method to ensure that the value is shown on the right part of the enemy
-     */
-    private void showText(String value, World world){
-        world.showText(value, getX(), getY() + 4);
     }
     /**
      * @param num   number of max enemies to be set

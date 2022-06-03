@@ -8,18 +8,18 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Shop extends Worlds
 {
-    private MyWorld gameWorld;
-    private Worlds world;
+    private GameWorld gameWorld; //makes sure that progress in game world is saved
     private Label label;
     
-    public Shop(MyWorld world)
+    public Shop(GameWorld world)
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
         gameWorld = world;
         prepare();
     }
-
+    /**
+     * prepares the shop with all necessary buttons and label in corner for money
+     */
     private void prepare(){
         label = new Label("Money: " + getMoney(), 25);
         label.setLineColor(new Color(0, 0, 0, 0));
@@ -37,11 +37,15 @@ public class Shop extends Worlds
         IncStrength incstr = new IncStrength();
         addObject(incstr, 300, 320);
     }
-    
+    /**
+     * updates the money label
+     */
     public void act(){
         label.setValue("Money: " + getMoney());
     }
-    
+    /**
+     * goes back to the game world
+     */
     public void resumeGame()
     {
         Greenfoot.setWorld(gameWorld);

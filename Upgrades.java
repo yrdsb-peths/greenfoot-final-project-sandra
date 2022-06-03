@@ -8,10 +8,10 @@
  */
 public class Upgrades extends Button
 {
-    private int upgradeLevel;
-    private int[] prices = {100, 200, 400, 700};
+    private int upgradeLevel; //index of price in prices
+    private int[] prices = {100, 200, 400, 700}; //array for prices of upgrades as player progresses
     public Upgrades(String name){
-        super(name, 0, 400, 70);
+        super(name, 0);
         upgradeLevel = 0;
         updateCost(prices[upgradeLevel]);
     }
@@ -22,7 +22,6 @@ public class Upgrades extends Button
     }
     public void act(){
         super.act();
-        showText();
     }
     public int getUpgradeLevel(){
         return upgradeLevel;
