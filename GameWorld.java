@@ -65,7 +65,7 @@ public class GameWorld extends Worlds
             Enemy.setMaxEnemies(getLevel()/2);
         }
         label.setValue("Level " + getLevel() + "\nScore: " + score+"\nMoney: " + super.getMoney());
-        if(Enemy.numEnemies<Enemy.maxNumEnemies && Greenfoot.getRandomNumber(15)<1){
+        if(Enemy.numEnemies<Enemy.maxNumEnemies && Greenfoot.getRandomNumber(200)<1){
             spawnEnemy();
         }
     }
