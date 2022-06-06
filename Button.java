@@ -46,7 +46,7 @@ public class Button extends Actor
         if(cost <= ((Worlds)getWorld()).getMoney()){
             canBuy = true;
         }
-        if(Greenfoot.mouseClicked(this) || Greenfoot.mouseClicked(label)&& canBuy){
+        if((Greenfoot.mouseClicked(this) || Greenfoot.mouseClicked(label)) && canBuy){
             buy();
         }
     }
@@ -67,15 +67,17 @@ public class Button extends Actor
      */
     public void buy(){
         ((Worlds)getWorld()).updateMoney(0-cost);
-        if(cost>((Worlds)getWorld()).getMoney()){
-            canBuy = false;
-        }
+        canBuy = false;
+        Greenfoot.playSound("clicksound.wav");
     }
     /**
      * @return      whether or not the player can buy the item
      */
     public boolean getBuyStatus(){
         return canBuy;
+    }
+    public void setBuyStatus(boolean bool){
+        canBuy = false;
     }
     /**
      * @return      name of button

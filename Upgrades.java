@@ -14,6 +14,7 @@ public class Upgrades extends Button
         super(name, 0);
         upgradeLevel = 0;
         updateCost(prices[upgradeLevel]);
+        super.setBuyStatus(false);
     }
     public void buy(){
         super.buy();

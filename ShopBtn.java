@@ -18,5 +18,6 @@ public class ShopBtn extends Button
     }
     public void buy(){
         Greenfoot.setWorld(((GameWorld)getWorld()).getShop());
+        Greenfoot.playSound("clicksound.wav");
     }
 }

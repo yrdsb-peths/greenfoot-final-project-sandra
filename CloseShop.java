@@ -13,5 +13,6 @@ public class CloseShop extends Button
     }
     public void buy(){
         ((Shop)getWorld()).resumeGame();
+        Greenfoot.playSound("clicksound.wav");
     }
 }
