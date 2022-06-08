@@ -13,6 +13,8 @@ public class DecCd extends Upgrades
     }
     public void buy(){
         super.buy();
-        Attacker.upgradeCd();
+        if(super.canBuy()){
+            Attacker.upgradeCd();
+        }
     }
 }

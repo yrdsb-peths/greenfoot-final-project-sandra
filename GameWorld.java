@@ -44,6 +44,10 @@ public class GameWorld extends Worlds
         ShopBtn shopBtn = new ShopBtn();
         addObject(shopBtn,546,35);
 
+        //add mute button
+        Mute mute = new Mute();
+        addObject(mute, 470, 35);
+        
         //add buy ammo button
         MaxAmmo maxAmmo = new MaxAmmo();
         addObject(maxAmmo,56,304);
@@ -62,7 +66,7 @@ public class GameWorld extends Worlds
         if(score!=0 && score>=50*getLevel() && !getLevelUp()){
             addLevel(1);
             setLevelUp(true);
-            Enemy.setMaxEnemies(getLevel()/2);
+            Enemy.setMaxEnemies((   getLevel()+5)/5);
         }
         label.setValue("Level " + getLevel() + "\nScore: " + score+"\nMoney: " + super.getMoney());
         if(Enemy.numEnemies<Enemy.maxNumEnemies && Greenfoot.getRandomNumber(200)<1){

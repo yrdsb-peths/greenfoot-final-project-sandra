@@ -13,6 +13,8 @@ public class IncStrength extends Upgrades
     }
     public void buy(){
         super.buy();
-        Attacker.upgradeStrength();
+        if(super.canBuy()){
+            Attacker.upgradeStrength();
+        }
     }
 }

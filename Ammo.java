@@ -16,7 +16,9 @@ public class Ammo extends Actor
      * decrements the total amount of bullets by 1
      */
     public Ammo(int rotation){
-        Greenfoot.playSound("shootsound.wav");
+        if(!Mute.muted){
+            Greenfoot.playSound("shootsound.wav");
+        }
         setRotation(rotation);
         numAmmo--;
     }

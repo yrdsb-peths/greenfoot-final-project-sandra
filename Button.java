@@ -4,7 +4,6 @@ public class Button extends Actor
 {
     private int cost; //cost of using the button
     private String name; //button name
-    private boolean canBuy; //boolean to keep track of if the player has enough money to buy
     private Label label; //label to display text on button
     
     /**
@@ -43,10 +42,7 @@ public class Button extends Actor
     public void act()
     {
         showText(); //show label with current value
-        if(cost <= ((Worlds)getWorld()).getMoney()){
-            canBuy = true;
-        }
-        if((Greenfoot.mouseClicked(this) || Greenfoot.mouseClicked(label)) && canBuy){
+        if((Greenfoot.mouseClicked(this) || Greenfoot.mouseClicked(label))){
             buy();
         }
     }
@@ -66,18 +62,18 @@ public class Button extends Actor
      *                  player does not have enough money
      */
     public void buy(){
-        ((Worlds)getWorld()).updateMoney(0-cost);
-        canBuy = false;
-        Greenfoot.playSound("clicksound.wav");
+        if(canBuy()){
+            ((Worlds)getWorld()).updateMoney(-1*cost);
+            if(!Mute.muted){
+                Greenfoot.playSound("clicksound.wav");
+            }
+        }
     }
     /**
      * @return      whether or not the player can buy the item
      */
-    public boolean getBuyStatus(){
-        return canBuy;
-    }
-    public void setBuyStatus(boolean bool){
-        canBuy = false;
+    public boolean canBuy(){
+        return cost <= ((Worlds)getWorld()).getMoney();
     }
     /**
      * @return      name of button

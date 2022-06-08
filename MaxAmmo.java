@@ -17,7 +17,7 @@ public class MaxAmmo extends Button
         setName("Buy " + ((Worlds)getWorld()).getMoney()/10);
     }
     public void buy(){
-        if(super.getBuyStatus()){
+        if(super.canBuy() && getCost() != 0){
             Ammo.numAmmo+= getCost()/10;
             super.buy();
         }

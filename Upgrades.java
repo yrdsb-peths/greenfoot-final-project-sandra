@@ -14,12 +14,28 @@ public class Upgrades extends Button
         super(name, 0);
         upgradeLevel = 0;
         updateCost(prices[upgradeLevel]);
-        super.setBuyStatus(false);
     }
     public void buy(){
         super.buy();
-        upgradeLevel++;
-        updateCost(prices[upgradeLevel]);
+        if(canBuy()){
+            upgradeLevel++;
+            updateCost(prices[upgradeLevel]);
+            if(isMaxLevel()){
+                setImage("bigbtnclick.png");
+                setName(getName() + " - Max Level");
+                updateCost(0);
+            }
+        }
+    }
+    public boolean canBuy(){
+        if(isMaxLevel()){
+            return false;
+        }else{
+            return super.canBuy();
+        }
+    }
+    public boolean isMaxLevel(){
+        return upgradeLevel==prices.length-1;
     }
     public void act(){
         super.act();

@@ -35,13 +35,13 @@ public class Worlds extends World
     /**
      * updates the player balance
      */
-    public void updateMoney(int value){
+    public static void updateMoney(int value){
         money +=value;
     }
     /**
      * @return money
      */
-    public int getMoney(){
+    public static int getMoney(){
         return money;
     }
     /**

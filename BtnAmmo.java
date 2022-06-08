@@ -13,6 +13,8 @@ public class BtnAmmo extends Button
     }
     public void buy(){
         super.buy();
-        Ammo.numAmmo++;
+        if(super.canBuy()){
+            Ammo.numAmmo++;
+        }
     }
 }

@@ -12,7 +12,7 @@ public class CloseShop extends Button
         super("Close", 0);
     }
     public void buy(){
+        super.buy();
         ((Shop)getWorld()).resumeGame();
-        Greenfoot.playSound("clicksound.wav");
     }
 }

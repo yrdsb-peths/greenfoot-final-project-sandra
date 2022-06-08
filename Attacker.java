@@ -18,7 +18,7 @@ public class Attacker extends Actor
     private static int[] cdtimeUpgrades = {40, 30, 20, 15}; //integer array for cooldown time upgrades
     private static int cdIndex; //index of current upgrade
     
-    private static int[] strengthUpgrades = {1, 2, 3, 4}; //integer array for strenght of bullet upgrades
+    private static int[] strengthUpgrades = {1, 2, 4, 6}; //integer array for strenght of bullet upgrades
     private static int strengthIndex; //index of current upgrade
     
     /**

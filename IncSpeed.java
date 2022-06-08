@@ -13,6 +13,8 @@ public class IncSpeed extends Upgrades
     }
     public void buy(){
         super.buy();
-        Attacker.upgradeSpeed();
+        if(super.canBuy()){
+            Attacker.upgradeSpeed();
+        }
     }
 }
