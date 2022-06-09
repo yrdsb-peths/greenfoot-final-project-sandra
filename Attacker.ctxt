@@ -1,9 +1,15 @@
 #BlueJ class context
 comment0.target=Attacker
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Attacker\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Attacker\ class\ -\ represents\ the\ black\ attacker\ at\ the\ bottom\ and\ keeps\ track\ of\ upgrades\r\n\ \r\n\ @author\ Sandra\ Huang\r\n\ @version\ June\ 2022\r\n
 comment1.params=
 comment1.target=Attacker()
 comment1.text=\r\n\ initialises\ all\ the\ array\ indices\ to\ 0\r\n\ cooldown\ is\ on\ false\r\n\ sets\ the\ initial\ speed,\ strength,\ and\ cdtime\ values\r\n
+comment10.params=
+comment10.target=int\ strengthArrLength()
+comment10.text=\r\n\ returns\ the\ length\ of\ the\ strenght\ upgrades\ array\r\n
+comment11.params=
+comment11.target=int\ spdArrLength()
+comment11.text=\r\n\ returns\ the\ length\ of\ the\ speed\ upgrades\ array\r\n
 comment2.params=
 comment2.target=void\ act()
 comment3.params=
@@ -24,4 +30,7 @@ comment7.text=\r\n\ increments\ the\ strength\ upgrade\ index\ \r\n
 comment8.params=
 comment8.target=void\ upgradeSpeed()
 comment8.text=\r\n\ increments\ the\ speed\ time\ upgrade\ index\ \r\n
-numComments=9
+comment9.params=
+comment9.target=int\ cdArrLength()
+comment9.text=\r\n\ returns\ the\ length\ of\ the\ cooldown\ upgrades\ array\r\n
+numComments=12

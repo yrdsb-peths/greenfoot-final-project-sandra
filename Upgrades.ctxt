@@ -1,16 +1,19 @@
 #BlueJ class context
 comment0.target=Upgrades
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Upgrades\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Upgrades\ Class\ -\ Outline\ for\ all\ upgrade\ buttons\r\n\ \r\n\ @author\ Sandra\ Huang\r\n\ @version\ June\ 2022\r\n
 comment1.params=name
 comment1.target=Upgrades(java.lang.String)
+comment1.text=\r\n\ creates\ any\ upgrade\ buttons\ with\ initial\ prices.\r\n
 comment2.params=
-comment2.target=void\ buy()
+comment2.target=boolean\ canBuy()
+comment2.text=\r\n\ returns\ whether\ or\ not\ the\ player\ can\ purchase\ the\ upgrade\r\n
 comment3.params=
-comment3.target=boolean\ canBuy()
+comment3.target=void\ upgrade()
+comment3.text=\r\n\ increases\ the\ price\ of\ the\ next\ upgrade\r\n\ if\ the\ current\ upgrade\ is\ the\ maximum,\ sets\ the\ image\ to\ clicked\ and\ updates\ the\ name\ to\ indicate\ that\ the\ upgrade\r\n\ \ is\ maxed\ out\r\n
 comment4.params=
 comment4.target=boolean\ isMaxLevel()
+comment4.text=\r\n\ placeholder\ for\ use\ of\ this\ method\ in\ the\ subclasses\r\n
 comment5.params=
-comment5.target=void\ act()
-comment6.params=
-comment6.target=int\ getUpgradeLevel()
-numComments=7
+comment5.target=int\ getUpgradeLevel()
+comment5.text=\r\n\ returns\ the\ current\ upgrade\ level\r\n
+numComments=6

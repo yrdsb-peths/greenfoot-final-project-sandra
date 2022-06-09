@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Worlds here.
+ * World to keep track of variables across multiple game worlds. 
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Sandra Huang
+ * @version June 2022
  */
 public class Worlds extends World
 {

@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MaxAmmo here.
+ * Max Ammo Button - buys the maximum number of ammo the player can afford
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Sandra Huang 
+ * @version June 2022
  */
 public class MaxAmmo extends Button
 {
@@ -18,8 +18,13 @@ public class MaxAmmo extends Button
     }
     public void buy(){
         if(super.canBuy() && getCost() != 0){
-            Ammo.numAmmo+= getCost()/10;
             super.buy();
         }
+    }
+    /**
+     * adds the appropriate number of ammo to the player's inventory
+     */
+    public void upgrade(){
+        Ammo.numAmmo+= getCost()/10; 
     }
 }

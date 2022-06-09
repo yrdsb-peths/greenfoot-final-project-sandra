@@ -1,10 +1,12 @@
 #BlueJ class context
 comment0.target=ShopBtn
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ ShopBtn\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Shop\ Button\ -\ brings\ the\ player\ into\ the\ shop\r\n\ \r\n\ @author\ Sandra\ Huang\r\n\ @version\ June\ 2022\r\n
 comment1.params=
 comment1.target=ShopBtn()
+comment1.text=\r\n\ creates\ a\ button\ with\ name\ "Shop"\ and\ price\ of\ 0\r\n
 comment2.params=
 comment2.target=void\ act()
 comment3.params=
 comment3.target=void\ buy()
+comment3.text=\r\n\ sets\ the\ player's\ world\ to\ shop\ when\ clicked\ on\r\n
 numComments=4

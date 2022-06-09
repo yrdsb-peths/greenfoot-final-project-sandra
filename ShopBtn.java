@@ -1,13 +1,16 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class ShopBtn here.
+ * Shop Button - brings the player into the shop
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Sandra Huang
+ * @version June 2022
  */
 public class ShopBtn extends Button
 {
+    /**
+     * creates a button with name "Shop" and price of 0
+     */
     public ShopBtn(){
         super("Shop", 0);
     }
@@ -16,6 +19,9 @@ public class ShopBtn extends Button
         super.act();
         showText();
     }
+    /**
+     * sets the player's world to shop when clicked on
+     */
     public void buy(){
         super.buy();
         Greenfoot.setWorld(((GameWorld)getWorld()).getShop());

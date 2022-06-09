@@ -1,20 +1,30 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class IncSpeed here.
+ * Increase Speed Button - buy bullet speed increase upgrades
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Sandra Huang
+ * @version June 2022
  */
 public class IncSpeed extends Upgrades
 {
+    /**
+     * creates a new upgrade button with name "Increase Speed"
+     */
     public IncSpeed(){
         super("Increase Speed");
     }
-    public void buy(){
-        super.buy();
-        if(super.canBuy()){
-            Attacker.upgradeSpeed();
-        }
+    /**
+     * upgrades bullet speed when bought
+     */
+    public void upgrade(){
+        super.upgrade();
+        Attacker.upgradeSpeed();
+    }
+    /**
+     * @return boolean that represents whether or not the upgrades are at max level
+     */
+    public boolean isMaxLevel(){
+        return getUpgradeLevel()==Attacker.spdArrLength()-1;
     }
 }

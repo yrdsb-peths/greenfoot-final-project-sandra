@@ -1,20 +1,24 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class BtnAmmo here.
+ * Ammo Button Class - purchases ammo one by one
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Sandra Huang
+ * @version June 2022
  */
 public class BtnAmmo extends Button
 {
+    /**
+     * creates a button with name "Ammo" and price $10
+     */
     public BtnAmmo(){
         super("Ammo", 10);
     }
-    public void buy(){
-        super.buy();
-        if(super.canBuy()){
-            Ammo.numAmmo++;
-        }
+    /**
+     * adds one ammo when purchased
+     */
+    public void upgrade(){
+        super.upgrade();
+        Ammo.numAmmo++;
     }
 }

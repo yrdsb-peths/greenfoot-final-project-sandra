@@ -1,8 +1,13 @@
 #BlueJ class context
 comment0.target=IncStrength
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ IncStrength\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Increase\ Strength\ Button\ -\ buys\ increase\ strength\ upgrades\r\n\ \r\n\ @author\ Sandra\ Huang\r\n\ @version\ June\ 2022\r\n
 comment1.params=
 comment1.target=IncStrength()
+comment1.text=\r\n\ makes\ a\ new\ upgrade\ button\ with\ name\ "Increase\ Strength"\r\n
 comment2.params=
-comment2.target=void\ buy()
-numComments=3
+comment2.target=void\ upgrade()
+comment2.text=\r\n\ upgrades\ bullet\ strength\ when\ bought\r\n
+comment3.params=
+comment3.target=boolean\ isMaxLevel()
+comment3.text=\r\n\ @return\ \ a\ boolean\ representing\ whether\ or\ not\ the\ upgrades\ are\ maxed\ out\r\n
+numComments=4

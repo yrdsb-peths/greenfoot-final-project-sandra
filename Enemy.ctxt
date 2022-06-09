@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Enemy
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Enemy\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Enemy\ class\ -\ game\ over\ if\ they\ reach\ the\ bottom\ of\ the\ screen\r\n\ \r\n\ @author\ Sandra\ Huang\r\n\ @version\ June\ 2022\r\n
 comment1.params=lives
 comment1.target=Enemy(int)
 comment1.text=\r\n\ @param\ lives\ \ \ \ \ the\ number\ of\ lives\ the\ enemy\ has\r\n

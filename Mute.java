@@ -1,17 +1,23 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Mute here.
+ * Mute button class - mutes/unmutes the game
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Sandra Huang 
+ * @version June 2022
  */
 public class Mute extends Button
 {
     public static boolean muted = false;
+    /**
+     * creates a button with name mute and price 0
+     */
     public Mute(){
         super("Mute", 0);
     }
+    /**
+     * keeps the mute status from last reset
+     */
     protected void addedToWorld(World world){
         super.addedToWorld(world);
         if(muted){
@@ -20,6 +26,9 @@ public class Mute extends Button
             setName("Mute");
         }
     }
+    /**
+     * changes status from muted to unmuted; from unmuted to muted
+     */
     public void buy(){
         muted = !muted;
         if(muted){

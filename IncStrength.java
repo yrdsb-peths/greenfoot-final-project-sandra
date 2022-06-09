@@ -1,20 +1,30 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class IncStrength here.
+ * Increase Strength Button - buys increase strength upgrades
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Sandra Huang
+ * @version June 2022
  */
 public class IncStrength extends Upgrades
 {
+    /**
+     * makes a new upgrade button with name "Increase Strength"
+     */
     public IncStrength(){
         super("Increase Strength");
     }
-    public void buy(){
-        super.buy();
-        if(super.canBuy()){
-            Attacker.upgradeStrength();
-        }
+    /**
+     * upgrades bullet strength when bought
+     */
+    public void upgrade(){
+        super.upgrade();
+        Attacker.upgradeStrength();
+    }
+    /**
+     * @return  a boolean representing whether or not the upgrades are maxed out
+     */
+    public boolean isMaxLevel(){
+        return getUpgradeLevel()==Attacker.strengthArrLength()-1;
     }
 }

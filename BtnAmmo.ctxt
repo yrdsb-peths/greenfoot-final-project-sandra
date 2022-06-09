@@ -1,8 +1,10 @@
 #BlueJ class context
 comment0.target=BtnAmmo
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ BtnAmmo\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Ammo\ Button\ Class\ -\ purchases\ ammo\ one\ by\ one\r\n\ \r\n\ @author\ Sandra\ Huang\r\n\ @version\ June\ 2022\r\n
 comment1.params=
 comment1.target=BtnAmmo()
+comment1.text=\r\n\ creates\ a\ button\ with\ name\ "Ammo"\ and\ price\ $10\r\n
 comment2.params=
-comment2.target=void\ buy()
+comment2.target=void\ upgrade()
+comment2.text=\r\n\ adds\ one\ ammo\ when\ purchased\r\n
 numComments=3

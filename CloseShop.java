@@ -1,10 +1,10 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class CloseShop here.
+ * Close Shop Button - closes the shop
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Sandra Huang
+ * @version June 2022
  */
 public class CloseShop extends Button
 {
@@ -12,7 +12,7 @@ public class CloseShop extends Button
         super("Close", 0);
     }
     public void buy(){
-        super.buy();
+        super.buy(); //to play sound
         ((Shop)getWorld()).resumeGame();
     }
 }

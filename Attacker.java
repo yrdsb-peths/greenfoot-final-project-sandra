@@ -1,24 +1,24 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Attacker here.
+ * Attacker class - represents the black attacker at the bottom and keeps track of upgrades
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Sandra Huang
+ * @version June 2022
  */
 public class Attacker extends Actor
 {
     private int counter; //counter for cooldown
     private boolean cooldown; //cooldown for true or false
     
-    private static int[] speedUpgrades = {4, 6, 8, 9}; //integer array for possible bullet speeds
+    private static int[] speedUpgrades = {4, 7, 11}; //integer array for possible bullet speeds
     private static int speedIndex; //index of current upgrade
     
     private static int cdtime; //amount of cooldown time for shooting 
-    private static int[] cdtimeUpgrades = {40, 30, 20, 15}; //integer array for cooldown time upgrades
+    private static int[] cdtimeUpgrades = {50, 25, 10, 5, 2}; //integer array for cooldown time upgrades
     private static int cdIndex; //index of current upgrade
     
-    private static int[] strengthUpgrades = {1, 2, 4, 6}; //integer array for strenght of bullet upgrades
+    private static int[] strengthUpgrades = {1, 2, 5, 10, 15, 20, 25}; //integer array for strength of bullet upgrades
     private static int strengthIndex; //index of current upgrade
     
     /**
@@ -101,5 +101,23 @@ public class Attacker extends Actor
     public static void upgradeSpeed(){
         speedIndex++;
         Ammo.speed = speedUpgrades[speedIndex];
+    }
+    /**
+     * returns the length of the cooldown upgrades array
+     */
+    public static int cdArrLength(){
+        return cdtimeUpgrades.length;
+    }
+    /**
+     * returns the length of the strenght upgrades array
+     */
+    public static int strengthArrLength(){
+        return strengthUpgrades.length;
+    }
+    /**
+     * returns the length of the speed upgrades array
+     */
+    public static int spdArrLength(){
+        return speedUpgrades.length;
     }
 }

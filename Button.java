@@ -1,5 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
+/**
+ * Button class - an outline for more specific buttons
+ * 
+ * @author Sandra Huang
+ * @version June 2022
+ */
+
 public class Button extends Actor
 {
     private int cost; //cost of using the button
@@ -42,7 +49,7 @@ public class Button extends Actor
     public void act()
     {
         showText(); //show label with current value
-        if((Greenfoot.mouseClicked(this) || Greenfoot.mouseClicked(label))){
+        if((Greenfoot.mouseClicked(this) || Greenfoot.mouseClicked(label)) && canBuy()){
             buy();
         }
     }
@@ -62,11 +69,10 @@ public class Button extends Actor
      *                  player does not have enough money
      */
     public void buy(){
-        if(canBuy()){
-            ((Worlds)getWorld()).updateMoney(-1*cost);
-            if(!Mute.muted){
-                Greenfoot.playSound("clicksound.wav");
-            }
+        ((Worlds)getWorld()).updateMoney(-1*cost);
+        upgrade();
+        if(!Mute.muted){
+            Greenfoot.playSound("clicksound.wav");
         }
     }
     /**
@@ -74,6 +80,12 @@ public class Button extends Actor
      */
     public boolean canBuy(){
         return cost <= ((Worlds)getWorld()).getMoney();
+    }
+    /**
+     * placeholder method to use in subclasses; appends whatever upgrade a button is responsible for
+     */
+    public void upgrade(){
+        
     }
     /**
      * @return      name of button
