@@ -38,7 +38,7 @@ public class GameWorld extends Worlds
         
         //add ammo button
         BtnAmmo btnAmmo = new BtnAmmo();
-        addObject(btnAmmo,56,366);;
+        addObject(btnAmmo,56,304);;
 
         //add shop button
         ShopBtn shopBtn = new ShopBtn();
@@ -50,7 +50,7 @@ public class GameWorld extends Worlds
         
         //add buy ammo button
         MaxAmmo maxAmmo = new MaxAmmo();
-        addObject(maxAmmo,56,304);
+        addObject(maxAmmo,56, 366);
         
         //spawn an initial enemy, set initial enemy number to 1
         Enemy.numEnemies = 0;

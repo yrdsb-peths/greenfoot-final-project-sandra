@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=MaxAmmo
-comment0.text=\r\n\ Max\ Ammo\ Button\ -\ buys\ the\ maximum\ number\ of\ ammo\ the\ player\ can\ afford\r\n\ \r\n\ @author\ Sandra\ Huang\ \r\n\ @version\ June\ 2022\r\n
+comment0.text=\r\n\ Max\ Ammo\ Button\ -\ buys\ up\ to\ 10\ ammo,\ depends\ on\ how\ much\ the\ player\ can\ afford\r\n\ \r\n\ @author\ Sandra\ Huang\ \r\n\ @version\ June\ 2022\r\n
 comment1.params=
 comment1.target=MaxAmmo()
 comment2.params=
