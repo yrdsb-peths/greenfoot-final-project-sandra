@@ -65,4 +65,9 @@ public class Worlds extends World
     public boolean getLevelUp(){
         return levelUp;
     }
+    /**
+     * use this method in subclasses
+     */
+    public void resumeGame(){
+    }
 }

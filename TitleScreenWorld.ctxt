@@ -4,6 +4,4 @@ comment0.text=\r\n\ TitleScreenWorld.\r\n\ \r\n\ @author\ Sandra\ Huang\r\n\ @ve
 comment1.params=
 comment1.target=TitleScreenWorld()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ TitleScreenWorld.\r\n\ \r\n
-comment2.params=
-comment2.target=void\ act()
-numComments=3
+numComments=2

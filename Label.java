@@ -70,7 +70,6 @@ public class Label extends Actor
         this.lineColor = lineColor;
         updateImage();
     }
-    
     /**
      * Sets the fill color of the text
      * 
@@ -81,8 +80,6 @@ public class Label extends Actor
         this.fillColor = fillColor;
         updateImage();
     }
-    
-
     /**
      * Update the image on screen to show the current value.
      */

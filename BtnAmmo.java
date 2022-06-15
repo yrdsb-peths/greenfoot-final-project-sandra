@@ -8,11 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class BtnAmmo extends Button
 {
-    /**
-     * creates a button with name "Ammo" and price $10
-     */
+    private int cooldown;
     public BtnAmmo(){
         super("Ammo", 10);
+        cooldown = 0;
     }
     /**
      * adds one ammo when purchased
@@ -20,5 +19,14 @@ public class BtnAmmo extends Button
     public void upgrade(){
         super.upgrade();
         Ammo.numAmmo++;
+    }
+    public void act()
+    {
+        super.act();
+        cooldown++;
+        if((Greenfoot.isKeyDown("shift")) && canBuy() && cooldown>5){
+            buy();
+            cooldown = 0;
+        }
     }
 }

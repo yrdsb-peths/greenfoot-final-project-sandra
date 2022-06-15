@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=TitleScreenButtons
+comment0.text=\r\n\ Class\ for\ buttons\ with\ big\ text\r\n\ \r\n\ @author\ Sandra\ Huang\r\n\ @version\ June\ 2022\r\n
+comment1.params=name
+comment1.target=TitleScreenButtons(java.lang.String)
+comment1.text=\r\n\ makes\ a\ button\ with\ name\ name,\ price\ 0,\ and\ text\ size\ 40\r\n
+numComments=2

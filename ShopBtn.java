@@ -14,16 +14,10 @@ public class ShopBtn extends Button
     public ShopBtn(){
         super("Shop", 0);
     }
-    public void act()
-    {
-        super.act();
-        showText();
-    }
     /**
      * sets the player's world to shop when clicked on
      */
-    public void buy(){
-        super.buy();
+    public void upgrade(){
         Greenfoot.setWorld(((GameWorld)getWorld()).getShop());
     }
 }

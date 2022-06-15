@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author Sandra Huang
  * @version June 2022
  */
-public class TitleScreenWorld extends World
+public class TitleScreenWorld extends Worlds
 {
 
     /**
@@ -19,22 +19,12 @@ public class TitleScreenWorld extends World
         super(600, 400, 1); 
         Label titleLabel = new Label("2D Shooter Game", 80);
         titleLabel.setLineColor(Label.MYCOLOUR);
-        addObject(titleLabel,300, 170);
+        addObject(titleLabel,300, 120);
         
-        Label instructionLabel = new Label("Press <space> to begin", 50);
-        instructionLabel.setFillColor(Label.MYCOLOUR);
-        instructionLabel.setLineColor(Label.TRANSPARENT);
-        addObject(instructionLabel, 300, 230);
+        Button playButton = new PlayButton();
+        addObject(playButton, 300, 200);
         
-        Label howToPlay = new Label("<a> to shoot and move mouse to aim", 30);
-        howToPlay.setFillColor(Label.MYCOLOUR);
-        howToPlay.setLineColor(Label.TRANSPARENT);
-        addObject(howToPlay, 300, 270);
-    }
-    public void act(){
-        if(Greenfoot.isKeyDown("space")){
-            GameWorld world = new GameWorld();
-            Greenfoot.setWorld(world);
-        }
+        Button howToPlay = new InstructionsBtn();
+        addObject(howToPlay, 300, 290);
     }
 }

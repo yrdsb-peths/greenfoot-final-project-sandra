@@ -1,17 +1,17 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Close Shop Button - closes the shop
+ * Takes the user to the game world
  * 
  * @author Sandra Huang
  * @version June 2022
  */
-public class CloseShop extends Button
+public class PlayButton extends TitleScreenButtons
 {
-    public CloseShop(){
-        super("Close", 0);
+    public PlayButton(){
+        super("Play");
     }
     public void upgrade(){
-        ((Worlds)getWorld()).resumeGame();
+        Greenfoot.setWorld(new GameWorld());
     }
 }

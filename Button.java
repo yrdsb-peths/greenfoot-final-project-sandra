@@ -19,13 +19,25 @@ public class Button extends Actor
      * @param cost  the cost of using the button
      */
     public Button(String name, int cost){
-        //getImage().scale(70, 50);
         this.name = name;
         this.cost = cost;
         if(cost!=0){
             label = new Label(name + "\n$" + cost, 25);
         }else{
             label = new Label(name, 25);
+        }
+        label.setLineColor(Label.TRANSPARENT);
+    }
+    /**
+     * constructor to customise label text size
+     */
+    public Button(String name, int cost, int textSize){
+        this.name = name;
+        this.cost = cost;
+        if(cost!=0){
+            label = new Label(name + "\n$" + cost, textSize);
+        }else{
+            label = new Label(name, textSize);
         }
         label.setLineColor(Label.TRANSPARENT);
     }

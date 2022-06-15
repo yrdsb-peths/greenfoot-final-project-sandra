@@ -4,5 +4,5 @@ comment0.text=\r\n\ Close\ Shop\ Button\ -\ closes\ the\ shop\r\n\ \r\n\ @author
 comment1.params=
 comment1.target=CloseShop()
 comment2.params=
-comment2.target=void\ buy()
+comment2.target=void\ upgrade()
 numComments=3
