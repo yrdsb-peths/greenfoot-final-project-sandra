@@ -24,7 +24,7 @@ public class BtnAmmo extends Button
     {
         super.act();
         cooldown++;
-        if((Greenfoot.isKeyDown("shift")) && canBuy() && cooldown>5){
+        if((Greenfoot.isKeyDown("shift")) && canBuy() && cooldown>10){
             buy();
             cooldown = 0;
         }
