@@ -9,11 +9,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class ChangeShoot extends ChangeControls
 {
     public ChangeShoot(){
-        super("Shooting Keyboard Key: " + Attacker.getShootKey());
+        super("Shooting: " + Attacker.getShootKey());
     }
     public void setKey(){
         Attacker.setShootKey(getCurrentKey());
-        setName("Shooting Keyboard Key: " + Attacker.getShootKey());
+        setName("Shooting: " + Attacker.getShootKey());
     }
     public void changeName(){
         

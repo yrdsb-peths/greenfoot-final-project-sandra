@@ -13,6 +13,6 @@ public class SettingsBtn extends Button
         getImage().scale(80, 50);
     }
     public void upgrade(){
-        Greenfoot.setWorld(new SettingsWorld((Worlds)getWorld()));
+        Greenfoot.setWorld(((GameWorld)getWorld()).getSettingsWorld());
     }
 }

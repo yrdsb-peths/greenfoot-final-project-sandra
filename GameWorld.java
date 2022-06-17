@@ -11,6 +11,7 @@ public class GameWorld extends Worlds
     private static int score; //player score
     private Shop shop; //Shop world to keep track of
     private Label label; //label to display score, money, level
+    private SettingsWorld settings; 
     /**
      * creates the game world
      */
@@ -18,6 +19,7 @@ public class GameWorld extends Worlds
     {    
         super(600, 400, 1, false);
         shop = new Shop(this);
+        settings = new SettingsWorld(this);
         score = 0;
         prepare();        
     }
@@ -114,5 +116,11 @@ public class GameWorld extends Worlds
     {
         GameOverWorld world = new GameOverWorld();
         Greenfoot.setWorld(world);
+    }
+    /**
+     * @return the settings world
+     */
+    public SettingsWorld getSettingsWorld(){
+        return settings;
     }
 }

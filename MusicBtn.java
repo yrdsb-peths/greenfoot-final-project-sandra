@@ -13,10 +13,10 @@ public class MusicBtn extends Button
     private int index = 0;
     
     public MusicBtn(){
-        super("", 0);
+        super("NOT CURRENTLY FUNCTIONAL", 0);
     }
     protected void addedToWorld(World world){
         super.addedToWorld(world);
-        setName("Track " + (index+1) + "- " + names[index]);
+        //setName("Track " + (index+1) + "- " + names[index]);
     }
 }
