@@ -21,7 +21,12 @@ public class SettingsWorld extends Worlds
                 
         Label controlsLabel = new Label("Controls", 50);
         controlsLabel.setLineColor(Label.MYCOLOUR);
-        addObject(controlsLabel,300, 70);
+        addObject(controlsLabel,300, 40);
+        
+        Label instructions = new Label("Try spam clicking your keyboard keys if it doesn't work at first", 25);
+        instructions.setFillColor(Label.MYCOLOUR);
+        instructions.setLineColor(Label.TRANSPARENT);
+        addObject(instructions, 300, 75);
         
         Button changeAmmo = new ChangeAmmo();
         addObject(changeAmmo, 300, 130);

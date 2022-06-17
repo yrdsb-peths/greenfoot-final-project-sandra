@@ -1,10 +1,12 @@
 #BlueJ class context
 comment0.target=ChangeShoot
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ ChangeShoot\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Changes\ the\ keyboard\ key\ you\ have\ to\ click\ to\ shoot\r\n\ \r\n\ @author\ Sandra\ Huang\r\n\ @version\ June\ 2022\r\n
 comment1.params=
 comment1.target=ChangeShoot()
 comment2.params=
 comment2.target=void\ setKey()
+comment2.text=\r\n\ Sets\ the\ shooting\ key\ to\ the\ user\ input\ key\r\n
 comment3.params=
 comment3.target=void\ changeName()
+comment3.text=\r\n\ changes\ the\ name\ of\ the\ button,\ depending\ on\ whether\ or\ not\ it\ is\ clicked\r\n
 numComments=4

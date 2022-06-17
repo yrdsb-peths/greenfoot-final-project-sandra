@@ -1,10 +1,12 @@
 #BlueJ class context
 comment0.target=ChangeAmmo
-comment0.text=\r\n\ Changes\ the\ ammo\ purchasing\ button\ keyboard\ shortcut\r\n\ \r\n\ @author\ Sandra\ Huang\r\n\ @version\ June\ 2022\r\n
+comment0.text=\r\n\ Changes\ the\ ammo-purchasing-button\ keyboard\ shortcut\r\n\ \r\n\ @author\ Sandra\ Huang\r\n\ @version\ June\ 2022\r\n
 comment1.params=
 comment1.target=ChangeAmmo()
 comment2.params=
 comment2.target=void\ setKey()
+comment2.text=\r\n\ Sets\ the\ ammo\ purchasing\ key\ to\ the\ user\ input\ key\r\n
 comment3.params=
 comment3.target=void\ changeName()
+comment3.text=\r\n\ changes\ the\ name\ of\ the\ button,\ depending\ on\ whether\ or\ not\ it\ is\ clicked\r\n
 numComments=4
