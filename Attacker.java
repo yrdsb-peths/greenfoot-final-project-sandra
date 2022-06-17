@@ -21,6 +21,7 @@ public class Attacker extends Actor
     private static int[] strengthUpgrades = {1, 2, 5, 10, 15, 20, 25}; //integer array for strength of bullet upgrades
     private static int strengthIndex; //index of current upgrade
     
+    private static String shootKey = "a";
     /**
      * initialises all the array indices to 0
      * cooldown is on false
@@ -46,7 +47,7 @@ public class Attacker extends Actor
         getWorld().showText(null, getX(),getY()-10);
         followCursor();
         //checks if cooldown is active
-        if(Greenfoot.isKeyDown("a") && cooldown){
+        if(Greenfoot.isKeyDown(shootKey) && cooldown){
             shoot();
             counter = 0;
             cooldown = false;
@@ -119,5 +120,17 @@ public class Attacker extends Actor
      */
     public static int spdArrLength(){
         return speedUpgrades.length;
+    }
+    /**
+     * sets the button to shoot
+     */
+    public static void setShootKey(String str){
+        shootKey = str;
+    }
+    /**
+     * gets the button that the game uses to shoot, currently.
+     */
+    public static String getShootKey(){
+        return shootKey;
     }
 }

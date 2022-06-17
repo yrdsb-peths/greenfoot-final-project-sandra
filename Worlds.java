@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Worlds extends World
 {
+    private static GreenfootSound backgroundMusic;
     private static int money; //player's current balance
     private int labelX = 60; //X location for label at top left corner of screen
     private int labelY = 50; //Y location for label at top left corner of screen

@@ -37,20 +37,24 @@ public class GameWorld extends Worlds
         showText("" + Ammo.numAmmo, getWidth()/2,getHeight()-10);
         
         //add ammo button
-        BtnAmmo btnAmmo = new BtnAmmo();
+        Button btnAmmo = new BtnAmmo();
         addObject(btnAmmo,56,304);;
 
         //add shop button
-        ShopBtn shopBtn = new ShopBtn();
+        Button shopBtn = new ShopBtn();
         addObject(shopBtn,546,35);
 
         //add mute button
-        Mute mute = new Mute();
+        Button mute = new Mute();
         addObject(mute, 470, 35);
         
         //add buy ammo button
-        MaxAmmo maxAmmo = new MaxAmmo();
+        Button maxAmmo = new MaxAmmo();
         addObject(maxAmmo,56, 366);
+        
+        //add settings buton
+        Button settings = new SettingsBtn();
+        addObject(settings, 540, 366);
         
         //spawn an initial enemy, set initial enemy number to 1
         Enemy.numEnemies = 0;

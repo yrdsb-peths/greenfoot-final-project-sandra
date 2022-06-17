@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=ChangeControls
+comment0.text=\r\n\ Parent\ class\ for\ buttons\ that\ change\ controls\r\n\ \r\n\ @author\ Sandra\ Huang\r\n\ @version\ June\ 2022\r\n
+comment1.params=name
+comment1.target=ChangeControls(java.lang.String)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ upgrade()
+comment4.params=
+comment4.target=void\ setKey()
+comment5.params=
+comment5.target=void\ changeName()
+comment6.params=
+comment6.target=java.lang.String\ getCurrentKey()
+numComments=7

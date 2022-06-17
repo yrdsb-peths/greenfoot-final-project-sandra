@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=SettingsWorld
+comment0.text=\r\n\ Settings\ world\ to\ edit\ controls\r\n\ \r\n\ @author\ Sandra\ Huang\r\n\ @version\ June\ 2022\r\n
+comment1.params=world
+comment1.target=SettingsWorld(Worlds)
+comment2.params=
+comment2.target=void\ prepare()
+comment3.params=
+comment3.target=void\ resumeGame()
+numComments=4

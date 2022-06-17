@@ -124,4 +124,10 @@ public class Button extends Actor
     public void updateCost(int num){
         cost = num;
     }
+    /**
+     * @return label the label of the button
+     */
+    public Label getLabel(){
+        return label;
+    }
 }

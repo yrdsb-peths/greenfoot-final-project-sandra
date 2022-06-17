@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class BtnAmmo extends Button
 {
     private int cooldown;
+    private static String ammoKey = "shift";
     public BtnAmmo(){
         super("Ammo", 10);
         cooldown = 0;
@@ -24,9 +25,21 @@ public class BtnAmmo extends Button
     {
         super.act();
         cooldown++;
-        if((Greenfoot.isKeyDown("shift")) && canBuy() && cooldown>10){
+        if((Greenfoot.isKeyDown(ammoKey)) && canBuy() && cooldown>10){
             buy();
             cooldown = 0;
         }
+    }
+    /**
+     * sets the keyboard key to buy ammo
+     */
+    public static void setAmmoKey(String str){
+        ammoKey = str;
+    }
+    /**
+     * gets the keyboard key that buys ammo
+     */
+    public static String getAmmoKey(){
+        return ammoKey;
     }
 }
